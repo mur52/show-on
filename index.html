@@ -1,457 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Show On | Men’s Clothing</title>
+  <meta name="description" content="Show On - Premium gents clothing. T-Shirts, Shirts, Pants, Hoodies, New Arrivals. Order via Facebook inbox." />
 
-  <title>Show On | Men’s Clothing in Bangladesh</title>
-  <meta name="description" content="Shop premium men’s T-shirts, shirts, pants, hoodies & new arrivals from Show On. Order via Facebook inbox or call 01883329919." />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Show On | Men’s Clothing in Bangladesh" />
-  <meta property="og:description" content="Premium men’s wear — T-shirts, shirts, pants & hoodies. New arrivals every week. Order via Facebook inbox or call 01883329919." />
-  <meta property="og:type" content="website" />
-
-  <link rel="icon" href="data:," />
+  <!-- Your CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* Minimal fallback styles if your style.css is missing something */
+    .container { width: min(1100px, 92%); margin: 0 auto; }
+    .topbar { display:flex; gap:12px; justify-content:space-between; align-items:center; padding:10px 0; }
+    .brand { display:flex; gap:10px; align-items:center; }
+    .brand img { width:42px; height:42px; border-radius:50%; object-fit:cover; }
+    .nav { display:flex; gap:14px; flex-wrap:wrap; }
+    .nav a { text-decoration:none; opacity:.9; }
+    .hero { padding:56px 0 36px; }
+    .hero h1 { font-size: clamp(28px, 4vw, 46px); margin:0 0 10px; }
+    .hero p { opacity:.9; margin:0 0 18px; max-width: 60ch; }
+    .btnrow { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:12px; text-decoration:none; border:1px solid rgba(255,255,255,.15); }
+    .btn--primary { background:#fff; color:#000; border-color:#fff; }
+    .btn--ghost { background:transparent; color:#fff; }
+    .section { padding:40px 0; border-top: 1px solid rgba(255,255,255,.08); }
+    .section__head h2 { margin:0 0 6px; font-size: 28px; }
+    .section__head p { margin:0; opacity:.85; }
+    .products { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin-top:18px; }
+    .card { border:1px solid rgba(255,255,255,.10); border-radius:18px; overflow:hidden; background: rgba(255,255,255,.03); }
+    .card__img img { width:100%; height:260px; object-fit:cover; display:block; background:#111; }
+    .card__body { padding:14px; }
+    .card__title { margin:0 0 10px; font-size: 18px; }
+    .card__meta { display:flex; justify-content:space-between; align-items:center; gap:10px; }
+    .price { font-weight:700; }
+    .tag { font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.16); opacity:.9; }
+    .card__actions { display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; }
+    footer { padding:26px 0; border-top: 1px solid rgba(255,255,255,.08); opacity:.9; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#070A0F; color:#fff; }
+  </style>
 </head>
 
 <body>
-  <!-- Top bar -->
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <div class="topbar__left">
-        <span class="chip">📞 <a id="phoneTop" href="#">Call: 01883329919</a></span>
-        <span class="chip">🚚 Bangladesh Delivery</span>
-      </div>
-      <div class="topbar__right">
-        <a id="fbTop" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Facebook Inbox</a>
-      </div>
-    </div>
-  </div>
 
-  <!-- Navbar -->
-  <header class="nav">
-    <div class="container nav__inner">
-      <a class="brand" href="#home" aria-label="Show On Home">
-        <span class="brand__mark">SHOW ON</span>
-        <span class="brand__sub">Men’s Clothing</span>
-      </a>
+  <!-- Header -->
+  <header class="container">
+    <div class="topbar">
+      <div class="brand">
+        <!-- If you have your logo file, put it here (example: assets/img/logo.jpg) -->
+        <img src="assets/img/h1.jpg" alt="Show On Logo" />
+        <div>
+          <strong>Show On</strong><br />
+          <small>Men’s Clothing</small>
+        </div>
+      </div>
 
-      <nav class="nav__links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#categories">Categories</a>
-        <a href="#new-arrivals">New Arrivals</a>
-        <a href="#best-sellers">Best Sellers</a>
-        <a href="#reviews">Reviews</a>
+      <nav class="nav">
+        <a href="#tshirts">T-Shirts</a>
+        <a href="#shirts">Shirts</a>
+        <a href="#pants">Pants</a>
+        <a href="#hoodies">Hoodies</a>
         <a href="#contact">Contact</a>
       </nav>
-
-      <div class="nav__actions">
-        <div class="search">
-          <input id="searchInput" type="search" placeholder="Search products…" aria-label="Search products" />
-        </div>
-        <a id="fbNav" class="btn btn--primary" target="_blank" rel="noopener">Shop on Facebook</a>
-        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-
-    <div class="mobileMenu" id="mobileMenu" aria-hidden="true">
-      <a href="#home">Home</a>
-      <a href="#categories">Categories</a>
-      <a href="#new-arrivals">New Arrivals</a>
-      <a href="#best-sellers">Best Sellers</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-      <div class="mobileMenu__cta">
-        <a id="fbMobile" class="btn btn--primary w100" target="_blank" rel="noopener">Shop on Facebook</a>
-        <a id="phoneMobile" class="btn btn--ghost w100" href="#">Call Now</a>
-      </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <main id="home" class="hero">
-    <div class="container hero__grid">
-      <div class="hero__content">
-        <p class="hero__tag">Premium Men’s Wear • Bangladesh</p>
-        <h1 class="hero__title">Upgrade Your Style with <span class="accent">Show On</span></h1>
-        <p class="hero__desc">
-          Premium men’s wear — T-shirts, shirts, pants & hoodies.
-          New arrivals every week. Order via Facebook inbox or call us.
-        </p>
+  <section class="hero container">
+    <h1>Show On — Premium Men’s Clothing</h1>
+    <p>
+      Shop gents fashion: T-shirts, shirts, pants, and hoodies.
+      To order, message us on Facebook or call us directly.
+    </p>
 
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#new-arrivals">New Arrivals</a>
-          <a id="fbHero" class="btn btn--ghost" target="_blank" rel="noopener">Order on Facebook</a>
-          <a id="phoneHero" class="btn btn--ghost" href="#">Call Now</a>
-        </div>
-
-        <div class="hero__stats">
-          <div class="stat">
-            <div class="stat__num">✔</div>
-            <div class="stat__label">Trendy Designs</div>
-          </div>
-          <div class="stat">
-            <div class="stat__num">★</div>
-            <div class="stat__label">Quality Fabric</div>
-          </div>
-          <div class="stat">
-            <div class="stat__num">⚡</div>
-            <div class="stat__label">Fast Response</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero__slider" aria-label="Featured highlights">
-        <div class="slider" id="slider">
-          <div class="slide is-active">
-            <img src="https://picsum.photos/seed/showon1/900/700" alt="New Arrivals - Show On" loading="eager" />
-            <div class="slide__overlay">
-              <h3>New Arrivals</h3>
-              <p>Fresh drops every week</p>
-            </div>
-          </div>
-          <div class="slide">
-            <img src="https://picsum.photos/seed/showon2/900/700" alt="Premium T-Shirts - Show On" loading="lazy" />
-            <div class="slide__overlay">
-              <h3>Premium T-Shirts</h3>
-              <p>Comfort • Fit • Style</p>
-            </div>
-          </div>
-          <div class="slide">
-            <img src="https://picsum.photos/seed/showon3/900/700" alt="Streetwear Hoodies - Show On" loading="lazy" />
-            <div class="slide__overlay">
-              <h3>Streetwear Hoodies</h3>
-              <p>Bold and cozy</p>
-            </div>
-          </div>
-
-          <button class="slider__btn slider__btn--prev" id="prevSlide" aria-label="Previous slide">‹</button>
-          <button class="slider__btn slider__btn--next" id="nextSlide" aria-label="Next slide">›</button>
-          <div class="slider__dots" id="sliderDots" aria-label="Slide dots"></div>
-        </div>
-      </div>
+    <div class="btnrow">
+      <a class="btn btn--primary" href="https://www.facebook.com/people/Show-On/61565011457603/?rdid=sEkClXbZT4Y1A1L5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ALWSWUeBL%2F" target="_blank" rel="noopener">
+        Order on Facebook
+      </a>
+      <a class="btn btn--ghost" href="tel:01883329919">Call: 01883329919</a>
     </div>
-  </main>
+  </section>
 
-  <!-- Categories -->
-  <section id="categories" class="section">
+  <!-- T-Shirts -->
+  <section class="section" id="tshirts">
     <div class="container">
       <div class="section__head">
-        <h2>Shop by Category</h2>
-        <p>Only gents collection — choose what you need.</p>
+        <h2>T-Shirts</h2>
+        <p>Premium men’s T-shirts collection.</p>
       </div>
-
-      <div class="grid grid--5">
-        <a class="cat" href="#tshirts">
-          <div class="cat__icon">👕</div>
-          <div class="cat__name">T-Shirts</div>
-        </a>
-        <a class="cat" href="#shirts">
-          <div class="cat__icon">🧥</div>
-          <div class="cat__name">Shirts</div>
-        </a>
-        <a class="cat" href="#pants">
-          <div class="cat__icon">👖</div>
-          <div class="cat__name">Pants</div>
-        </a>
-        <a class="cat" href="#hoodies">
-          <div class="cat__icon">🧢</div>
-          <div class="cat__name">Hoodies</div>
-        </a>
-        <a class="cat" href="#new-arrivals">
-          <div class="cat__icon">🔥</div>
-          <div class="cat__name">New Arrivals</div>
-        </a>
-      </div>
-    </div>
-  </section>
-<section class="section" id="tshirts">
-  <div class="container">
-    <div class="section__head">
-      <h2>T-Shirts</h2>
-      <p>Premium men’s T-shirts collection.</p>
-    </div>
-    <div class="products" id="tshirtsGrid"></div>
-  </div>
-</section>
-
-<section class="section section--alt" id="shirts">
-  <div class="container">
-    <div class="section__head">
-      <h2>Shirts</h2>
-      <p>Casual & formal shirts for men.</p>
-    </div>
-    <div class="products" id="shirtsGrid"></div>
-  </div>
-</section>
-
-<section class="section" id="pants">
-  <div class="container">
-    <div class="section__head">
-      <h2>Pants</h2>
-      <p>Comfortable pants & jeans collection.</p>
-    </div>
-    <div class="products" id="pantsGrid"></div>
-  </div>
-</section>
-
-<section class="section section--alt" id="hoodies">
-  <div class="container">
-    <div class="section__head">
-      <h2>Hoodies</h2>
-      <p>Streetwear hoodies for men.</p>
-    </div>
-    <div class="products" id="hoodiesGrid"></div>
-  </div>
-</section>
-
-  <!-- New Arrivals -->
-  <section id="new-arrivals" class="section section--alt">
-    <div class="container">
-      <div class="section__head section__head--row">
-        <div>
-          <h2>New Arrivals</h2>
-          <p>Latest drops — message to order instantly.</p>
-        </div>
-        <a id="fbArrivals" class="btn btn--primary" target="_blank" rel="noopener">Order via Facebook</a>
-      </div>
-
-      <div class="products" id="newArrivalsGrid" aria-live="polite"></div>
+      <div class="products" id="tshirtsGrid"></div>
     </div>
   </section>
 
-  <!-- Best Sellers -->
-  <section id="best-sellers" class="section">
-    <div class="container">
-      <div class="section__head section__head--row">
-        <div>
-          <h2>Best Sellers</h2>
-          <p>Most loved picks from Show On.</p>
-        </div>
-        <a href="#contact" class="btn btn--ghost">Need help ordering?</a>
-      </div>
-
-      <div class="products" id="bestSellersGrid" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <!-- Offer Banner -->
-  <section class="banner">
-    <div class="container banner__inner">
-      <div>
-        <h3>Limited Time Offer</h3>
-        <p>Grab your favorite men’s wear today. Quick ordering on Facebook inbox.</p>
-      </div>
-      <div class="banner__actions">
-        <a id="fbOffer" class="btn btn--primary" target="_blank" rel="noopener">Message to Order</a>
-        <a id="phoneOffer" class="btn btn--ghost" href="#">Call Now</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section class="section section--alt">
+  <!-- Shirts -->
+  <section class="section" id="shirts">
     <div class="container">
       <div class="section__head">
-        <h2>Why Choose Show On?</h2>
-        <p>Quality + modern style + fast response.</p>
+        <h2>Shirts</h2>
+        <p>Casual & formal shirts for men.</p>
       </div>
-
-      <div class="features">
-        <div class="feature">
-          <div class="feature__icon">🧵</div>
-          <h3>Premium Fabric</h3>
-          <p>Comfortable materials with long-lasting quality.</p>
-        </div>
-        <div class="feature">
-          <div class="feature__icon">✨</div>
-          <h3>Trendy Design</h3>
-          <p>Modern fits that match your daily lifestyle.</p>
-        </div>
-        <div class="feature">
-          <div class="feature__icon">💬</div>
-          <h3>Fast Response</h3>
-          <p>Order quickly via Facebook inbox or phone call.</p>
-        </div>
-        <div class="feature">
-          <div class="feature__icon">🚚</div>
-          <h3>Trusted Delivery</h3>
-          <p>Delivery across Bangladesh (as available).</p>
-        </div>
-      </div>
+      <div class="products" id="shirtsGrid"></div>
     </div>
   </section>
 
-  <!-- Reviews -->
-  <section id="reviews" class="section">
+  <!-- Pants -->
+  <section class="section" id="pants">
     <div class="container">
       <div class="section__head">
-        <h2>Customer Reviews</h2>
-        <p>What customers say about Show On.</p>
+        <h2>Pants</h2>
+        <p>Comfortable pants & jeans collection.</p>
       </div>
-
-      <div class="reviews">
-        <div class="review">
-          <div class="review__stars">★★★★★</div>
-          <p>“T-shirt quality is really good and fitting is perfect.”</p>
-          <span class="review__by">— Customer, Chattogram</span>
-        </div>
-        <div class="review">
-          <div class="review__stars">★★★★★</div>
-          <p>“Fast reply on inbox. Delivery was smooth.”</p>
-          <span class="review__by">— Customer, Dhaka</span>
-        </div>
-        <div class="review">
-          <div class="review__stars">★★★★☆</div>
-          <p>“Hoodie looks premium. Good for winter.”</p>
-          <span class="review__by">— Customer, Cumilla</span>
-        </div>
-        <div class="review">
-          <div class="review__stars">★★★★★</div>
-          <p>“Nice collection of men’s shirts. Recommended.”</p>
-          <span class="review__by">— Customer, Chattogram</span>
-        </div>
-        <div class="review">
-          <div class="review__stars">★★★★★</div>
-          <p>“Great price compared to quality. Loved it.”</p>
-          <span class="review__by">— Customer, Sylhet</span>
-        </div>
-        <div class="review">
-          <div class="review__stars">★★★★☆</div>
-          <p>“Good fabric and stitching. Will buy again.”</p>
-          <span class="review__by">— Customer, Gazipur</span>
-        </div>
-      </div>
+      <div class="products" id="pantsGrid"></div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section section--alt">
+  <!-- Hoodies -->
+  <section class="section" id="hoodies">
     <div class="container">
       <div class="section__head">
-        <h2>FAQ</h2>
-        <p>Quick answers before you order.</p>
+        <h2>Hoodies</h2>
+        <p>Streetwear hoodies for men.</p>
       </div>
-
-      <div class="faq" id="faq">
-        <details class="faq__item" open>
-          <summary>How to order?</summary>
-          <p>Click any “Order Now” button to open our Facebook page, then send your product name + size + delivery address.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Delivery time?</summary>
-          <p>Delivery time depends on your location. We’ll confirm the estimated time in inbox or over phone.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Size exchange available?</summary>
-          <p>If size issue happens, contact us quickly after receiving the product. We will guide you based on availability.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Cash on Delivery?</summary>
-          <p>Cash on delivery may be available in selected areas. Confirm in inbox/phone before ordering.</p>
-        </details>
-      </div>
+      <div class="products" id="hoodiesGrid"></div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section">
+  <section class="section" id="contact">
     <div class="container">
       <div class="section__head">
-        <h2>Contact & Order</h2>
-        <p>Call or message us on Facebook to place your order.</p>
+        <h2>Contact</h2>
+        <p>Order via Facebook inbox or call us.</p>
       </div>
 
-      <div class="contact">
-        <div class="contact__card">
-          <h3>Quick Contact</h3>
-          <div class="contact__rows">
-            <div class="contact__row"><span>📞 Phone</span><a id="phoneFooter" href="#">01883329919</a></div>
-            <div class="contact__row"><span>💬 Facebook</span><a id="fbFooter" target="_blank" rel="noopener">Open Page</a></div>
-            <div class="contact__row"><span>📍 Location</span><span>Bangladesh</span></div>
-          </div>
-
-          <div class="contact__cta">
-            <a id="phoneCTA" class="btn btn--primary" href="#">Call Now</a>
-            <a id="fbCTA" class="btn btn--ghost" target="_blank" rel="noopener">Facebook Inbox</a>
-          </div>
-
-          <p class="hint">
-            Tip: When you message, include <b>Product Name</b>, <b>Size</b>, and <b>Delivery Address</b>.
-          </p>
-        </div>
-
-        <div class="contact__card">
-          <h3>Send Order Details</h3>
-          <form id="contactForm" class="form" novalidate>
-            <label>
-              Name
-              <input type="text" id="name" placeholder="Your name" required />
-            </label>
-            <label>
-              Phone
-              <input type="tel" id="phone" placeholder="01XXXXXXXXX" required />
-            </label>
-            <label>
-              Message
-              <textarea id="message" rows="5" placeholder="Example: Black Hoodie, Size L, Qty 1, Delivery: ..." required></textarea>
-            </label>
-
-            <button type="submit" class="btn btn--primary">Submit</button>
-            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
-
-            <div class="form__after" id="afterSubmit" hidden>
-              <p><b>Copy this message</b> and send it to our Facebook inbox:</p>
-              <textarea id="generatedText" rows="6" readonly></textarea>
-              <div class="form__afterBtns">
-                <button type="button" id="copyBtn" class="btn btn--ghost">Copy</button>
-                <a id="openFbBtn" class="btn btn--primary" target="_blank" rel="noopener">Open Facebook Page</a>
-              </div>
-            </div>
-          </form>
-        </div>
+      <div class="btnrow" style="margin-top:16px;">
+        <a class="btn btn--primary" href="https://www.facebook.com/people/Show-On/61565011457603/?rdid=sEkClXbZT4Y1A1L5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ALWSWUeBL%2F" target="_blank" rel="noopener">
+          Message on Facebook
+        </a>
+        <a class="btn btn--ghost" href="tel:01883329919">Call: 01883329919</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div>
-        <div class="footer__brand">SHOW ON</div>
-        <p class="muted">Men’s clothing brand in Bangladesh — T-shirts, shirts, pants, hoodies & new arrivals.</p>
-      </div>
-
-      <div>
-        <div class="footer__title">Quick Links</div>
-        <div class="footer__links">
-          <a href="#categories">Categories</a>
-          <a href="#new-arrivals">New Arrivals</a>
-          <a href="#best-sellers">Best Sellers</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#contact">Contact</a>
+  <footer>
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+        <div>© <span id="year"></span> Show On. All rights reserved.</div>
+        <div>
+          <a href="https://www.facebook.com/people/Show-On/61565011457603/?rdid=sEkClXbZT4Y1A1L5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ALWSWUeBL%2F" target="_blank" rel="noopener" style="color:#fff; text-decoration:none;">
+            Facebook Page
+          </a>
         </div>
       </div>
-
-      <div>
-        <div class="footer__title">Contact</div>
-        <div class="footer__links">
-          <a id="phoneBottom" href="#">📞 01883329919</a>
-          <a id="fbBottom" target="_blank" rel="noopener">💬 Facebook Page</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="container footer__bottom">
-      <span class="muted">© <span id="year"></span> Show On. All rights reserved.</span>
     </div>
   </footer>
 
+  <!-- Your JS -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
