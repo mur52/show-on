@@ -43,43 +43,72 @@
 
 <body>
 
-  <!-- Header -->
-  <header class="container">
-    <div class="topbar">
-      <div class="brand">
-        <!-- If you have your logo file, put it here (example: assets/img/logo.jpg) -->
-        <img src="assets/img/h1.jpg" alt="Show On Logo" />
-        <div>
-          <strong>Show On</strong><br />
-          <small>Men’s Clothing</small>
-        </div>
+ <div class="topstrip">
+  <div class="container row">
+    <div>🔥 New Arrivals available — DM on Facebook to order</div>
+    <div>
+      <a href="tel:01883329919">Call: 01883329919</a>
+      &nbsp; | &nbsp;
+      <a href="https://www.facebook.com/people/Show-On/61565011457603/?rdid=sEkClXbZT4Y1A1L5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ALWSWUeBL%2F" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container inner">
+    <a class="brand" href="#">
+      <img class="brand__logo" src="assets/img/h1.jpg" alt="Show On" />
+      <div>
+        <div class="brand__name">Show On</div>
+        <div class="brand__tag">Men’s Clothing • Premium Quality</div>
       </div>
+    </a>
 
-      <nav class="nav">
-        <a href="#tshirts">T-Shirts</a>
-        <a href="#shirts">Shirts</a>
-        <a href="#pants">Pants</a>
-        <a href="#hoodies">Hoodies</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <nav class="nav">
+      <a href="#tshirts">T-Shirts</a>
+      <a href="#shirts">Shirts</a>
+      <a href="#pants">Pants</a>
+      <a href="#hoodies">Hoodies</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search products..." />
+      </div>
+      <a class="btn btn--primary" href="https://www.facebook.com/people/Show-On/61565011457603/?rdid=sEkClXbZT4Y1A1L5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ALWSWUeBL%2F" target="_blank" rel="noopener">Order</a>
+      <a class="btn btn--ghost" href="tel:01883329919">Call</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- Hero -->
-  <section class="hero container">
-    <h1>Show On — Premium Men’s Clothing</h1>
-    <p>
-      Shop gents fashion: T-shirts, shirts, pants, and hoodies.
-      To order, message us on Facebook or call us directly.
-    </p>
 
-    <div class="btnrow">
-      <a class="btn btn--primary" href="https://www.facebook.com/people/Show-On/61565011457603/?rdid=sEkClXbZT4Y1A1L5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ALWSWUeBL%2F" target="_blank" rel="noopener">
-        Order on Facebook
-      </a>
-      <a class="btn btn--ghost" href="tel:01883329919">Call: 01883329919</a>
+ <section class="hero">
+  <div class="container wrap">
+    <div class="hero__card">
+      <span class="badge">✅ Trusted Men’s Clothing Brand</span>
+      <h1>Show On — Premium Men’s Fashion</h1>
+      <p>
+        T-Shirts, Shirts, Pants & Hoodies. Choose your product and order via Facebook inbox.
+        Fast response & quality products.
+      </p>
+      <div class="cta">
+        <a class="btn btn--primary" href="https://www.facebook.com/people/Show-On/61565011457603/?rdid=sEkClXbZT4Y1A1L5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ALWSWUeBL%2F" target="_blank" rel="noopener">Order on Facebook</a>
+        <a class="btn btn--ghost" href="tel:01883329919">Call: 01883329919</a>
+      </div>
     </div>
-  </section>
+
+    <div class="hero__info">
+      <span class="badge">💥 Hot Deals & New Drops</span>
+      <div class="kv">
+        <div class="item"><span>Delivery</span><strong>Available</strong></div>
+        <div class="item"><span>Payment</span><strong>Cash on Delivery*</strong></div>
+        <div class="item"><span>Support</span><strong>Facebook Inbox</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- T-Shirts -->
   <section class="section" id="tshirts">
@@ -142,19 +171,25 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;">
-        <div>© <span id="year"></span> Show On. All rights reserved.</div>
-        <div>
-          <a href="https://www.facebook.com/people/Show-On/61565011457603/?rdid=sEkClXbZT4Y1A1L5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ALWSWUeBL%2F" target="_blank" rel="noopener" style="color:#fff; text-decoration:none;">
-            Facebook Page
-          </a>
-        </div>
-      </div>
+  <footer class="footer" id="contact">
+  <div class="container inner">
+    <div>
+      <h3>Show On</h3>
+      <p>Premium gents clothing in Bangladesh. Order easily via Facebook inbox or call us.</p>
     </div>
-  </footer>
+
+    <div class="links">
+      <a href="tel:01883329919">📞 01883329919</a>
+      <a href="https://www.facebook.com/people/Show-On/61565011457603/?rdid=sEkClXbZT4Y1A1L5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ALWSWUeBL%2F" target="_blank" rel="noopener">🌐 Facebook Page</a>
+      <a href="#tshirts">🛍️ Shop</a>
+    </div>
+  </div>
+
+  <div class="container bottom">
+    <div>© <span id="year"></span> Show On. All rights reserved.</div>
+    <div>Built with ❤️ on GitHub Pages</div>
+  </div>
+</footer>
 
   <!-- Your JS -->
   <script src="assets/js/main.js"></script>
